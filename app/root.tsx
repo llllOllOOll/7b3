@@ -10,9 +10,12 @@ import {
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react";
 
+import styles from "./tailwind.css"
+
 export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-];
+]
 
 export default function App() {
   return (
@@ -24,11 +27,11 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Analytics />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <Analytics />
       </body>
     </html>
   );
