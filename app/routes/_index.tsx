@@ -1,12 +1,8 @@
-import type { MetaFunction } from '@remix-run/node'
+import { json } from '@remix-run/node'
+import { sql } from '@vercel/postgres'
 
-export const meta: MetaFunction = () => {
-	return [
-		{ title: 'New Remix App' },
-		{ name: 'description', content: 'Welcome to Remix!' },
-	]
-}
-
-export default function Index() {
-	return <h1 className="mx-auto max-w-lg bg-zinc-500">Landing page test</h1>
+export async function loader() {
+	const { rows } = await sql`SELECT first_name FROM employees`
+	console.log('Rows', rows)
+	return json(rows)
 }
