@@ -7,7 +7,7 @@ const Hero = () => {
 		<div className="container relative flex items-center gap-16 overflow-hidden px-28 pt-36">
 			<div>
 				<h1 className="text-[85px] font-bold leading-tight text-veryDarkBlue">
-					More than just <br /> shorter links
+					More than just <br /> shorter links!
 				</h1>
 				<p className="text-lg leading-normal text-gray">
 					Build your brand’s recognition and get detailed <br /> insights on how
