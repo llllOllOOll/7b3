@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Button } from './ui/button'
 
 const Hero = () => {
@@ -24,4 +22,4 @@ const Hero = () => {
 	)
 }
 
-export default Hero
+export { Hero }
